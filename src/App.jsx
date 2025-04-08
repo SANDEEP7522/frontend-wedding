@@ -1,12 +1,20 @@
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css';
-import { Button } from '@/components/ui/button';
+import { AppRoutes } from './Routes';
+import { Toaster } from './components/ui/toaster';
+import { AppContextProvider } from './context/AppContextProvider';
 
 function App() {
   return (
-    <div>
-       <Button>Click me</Button>
-    </div>
+    <QueryClientProvider client={QueryClient}>
+    <AppContextProvider>
+      <AppRoutes />
+     
+    </AppContextProvider>
+
+    <Toaster />
+  </QueryClientProvider>
   )
 }
 
