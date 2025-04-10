@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Loader2 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 export const SignupCard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +24,8 @@ export const SignupCard = () => {
     password: "",
     verificationMethod: "email",
   });
+
+  const usenavigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -132,12 +135,12 @@ export const SignupCard = () => {
       <Separator className="my-1" />
       <p className="text-center mb-2">
         Already have an account?{" "}
-        <a
-          href="/login"
-          className="text-primary hover:underline hover:text-blue-600"
+        <span
+          className="text-blue-500 cursor-pointer"
+          onClick={() => usenavigate("/auth/signin")}
         >
-          Login
-        </a>
+          Sign In
+        </span>
       </p>
     </Card>
   );

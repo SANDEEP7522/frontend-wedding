@@ -6,6 +6,9 @@
 
 import { Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/Auth/Auth";
+import { SignupCard } from "./components/organisms/Auth/SignupCard";
+import { CodeCard } from "./components/organisms/Auth/CodeCard";
+import { SigninCard } from "./components/organisms/Auth/SigninCard";
 
 function App() {
   return (
@@ -18,7 +21,9 @@ function App() {
     //   <Toaster />
     // </QueryClientProvider>
     <Routes>
-      <Route path="/auth" element={<Auth />} />
+      <Route path="/auth/signup" element={<Auth> <SignupCard /> </Auth>} />
+      <Route path="/auth/code" element={<Auth><CodeCard />  </Auth>} />
+      <Route path="/auth/signin" element={<Auth> <SigninCard /> </Auth>} />
     </Routes>
   );
 }
