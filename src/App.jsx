@@ -9,6 +9,7 @@ import { Auth } from "./pages/Auth/Auth";
 import { SignupCard } from "./components/organisms/Auth/SignupCard";
 import { CodeCard } from "./components/organisms/Auth/CodeCard";
 import { SigninCard } from "./components/organisms/Auth/SigninCard";
+import { NotFound } from "./pages/NotFound/NoteFound";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/auth/signup" element={<Auth> <SignupCard /> </Auth>} />
       <Route path="/auth/code" element={<Auth><CodeCard />  </Auth>} />
       <Route path="/auth/signin" element={<Auth> <SigninCard /> </Auth>} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 }
