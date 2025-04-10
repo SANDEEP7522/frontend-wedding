@@ -19,7 +19,7 @@ export const registerUser = async ({
     return response.data;
   } catch (error) {
     console.log("registerUser", error);
-    throw error.response.data;
+    throw error;
   }
 };
 

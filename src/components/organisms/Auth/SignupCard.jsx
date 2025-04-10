@@ -1,58 +1,63 @@
-import { useState } from "react";
 import {
   Card,
   CardHeader,
   CardTitle,
   CardContent,
   CardFooter,
+  CardDescription,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Loader2 } from "lucide-react";
+import { LucideLoader2, TriangleAlert } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useNavigate } from "react-router-dom";
-
-export const SignupCard = () => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [signupForm, setSignupForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    password: "",
-    verificationMethod: "email",
-  });
-
-  const usenavigate = useNavigate();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setSignupForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    // Simulate API call
-    setTimeout(() => {
-      console.log("Form Submitted:", signupForm);
-      setIsLoading(false);
-    }, 2000);
-  };
+import { FaCheck } from "react-icons/fa";
+export const SignupCard = ({
+  signupForm,
+  setSignupForm,
+  validationErrors,
+  onSignupHandleSubmit,
+  handleChange,
+  error,
+  isPending,
+  isSuccess,
+}) => {
+  const navigate = useNavigate();
 
   return (
     <Card className="w-full max-w-md mx-auto shadow-xl bg-slack">
       <CardHeader>
         <CardTitle className="text-2xl text-center">Sign Up</CardTitle>
+        <CardDescription className="text-center">
+          {" "}
+          Sign up to your account{" "}
+        </CardDescription>
+        {validationErrors && (
+          <div className="bg-destructive/15 p-4 rounded-md flex items-center gap-x-2 text-sm">
+            <TriangleAlert size={16} />
+            <p>{validationErrors.message}</p>
+          </div>
+        )}
+
+        {error && (
+          <div className="bg-destructive/15 p-4 rounded-md flex items-center gap-x-2 text-sm">
+            <TriangleAlert size={16} />
+            <p>{error}</p>
+          </div>
+        )}
+
+        {isSuccess && (
+          <div className="bg-green-100 p-4 rounded-md flex items-center gap-x-2 text-sm text-green-800">
+            <FaCheck size={16} className="text-green-500" />
+            <p>Successful sign up, redirecting to code verification page...</p>
+            <LucideLoader2 className="animate-spin" size={16} />
+          </div>
+        )}
       </CardHeader>
 
-      <form onSubmit={handleSubmit} className="space-y-1 mb-[-1rem]">
+      <form onSubmit={onSignupHandleSubmit} className="space-y-1 mb-[-1rem]">
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Input
@@ -74,6 +79,7 @@ export const SignupCard = () => {
               value={signupForm.email}
               onChange={handleChange}
               required
+              disabled={isPending}
             />
           </div>
 
@@ -86,6 +92,8 @@ export const SignupCard = () => {
               value={signupForm.phone}
               onChange={handleChange}
               required
+              disabled={isPending}
+              minLength={10}
             />
           </div>
 
@@ -98,6 +106,8 @@ export const SignupCard = () => {
               value={signupForm.password}
               onChange={handleChange}
               required
+              disabled={isPending}
+              minLength={8}
             />
           </div>
 
@@ -123,9 +133,12 @@ export const SignupCard = () => {
         </CardContent>
 
         <CardFooter className="flex justify-center">
-          <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? (
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          <Button type="submit" className="w-full" disabled={isPending}>
+            {isPending ? (
+              <div className="flex items-center justify-center gap-2">
+                <LucideLoader2 className="animate-spin" size={16} />
+                Creating...
+              </div>
             ) : (
               "Create Account"
             )}
@@ -137,7 +150,7 @@ export const SignupCard = () => {
         Already have an account?{" "}
         <span
           className="text-blue-500 cursor-pointer"
-          onClick={() => usenavigate("/auth/signin")}
+          onClick={() => navigate("/auth/signin")}
         >
           Sign In
         </span>
