@@ -19,7 +19,7 @@ export const SignupContainer = () => {
   useEffect(() => {
     if (isSuccess) {
       setTimeout(() => {
-        navigate("/auth/signin");
+        navigate("/auth/code");
       }, 3000);
       
     }

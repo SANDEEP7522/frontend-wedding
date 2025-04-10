@@ -23,12 +23,11 @@ export const registerUser = async ({
   }
 };
 
-export const verifyUserwithCode = async ({ email, phone, verificationCode }) => {
+export const verifyUserwithCode = async ({ email, otp }) => {
   try {
     const response = await axios.post("/users/verify-otp", {
       email,
-      phone,
-      verificationCode,
+      otp,
 
     });
 

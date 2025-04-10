@@ -5,66 +5,62 @@ import {
   CardTitle,
   CardContent,
   CardFooter,
+  CardDescription,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { FaCheck } from "react-icons/fa";
+import { LucideLoader2, TriangleAlert } from "lucide-react";
 
-export const CodeCard = () => {
-  const [verificationForm, setVerificationForm] = useState({
-    email: "",
-    phone: "",
-    verificationCode: Array(5).fill(""),
-  });
-
+export const CodeCard = ({
+  verificationForm,
+  validationErrors,
+  handleSubmit,
+  handleChange,
+  handleOtpChange,
+  error,
+  isPending,
+  isSuccess,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const usenavigate = useNavigate();
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setVerificationForm((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const navigate = useNavigate();
 
-  const handleOtpChange = (index, value) => {
-    if (!/^\d?$/.test(value)) return; // only allow 0-9 and single digit
-
-    const updatedCode = [...verificationForm.verificationCode];
-    updatedCode[index] = value;
-
-    setVerificationForm((prev) => ({
-      ...prev,
-      verificationCode: updatedCode,
-    }));
-
-    // Move to next input if current is filled
-    if (value && index < 4) {
-      const nextInput = document.getElementById(`otp-${index + 1}`);
-      if (nextInput) nextInput.focus();
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    const finalCode = verificationForm.verificationCode.join("");
-
-    setTimeout(() => {
-      console.log("Form Submitted:", {
-        ...verificationForm,
-        verificationCode: finalCode,
-      });
-      setIsLoading(false);
-    }, 2000);
+  const handleResend = () => {
+    navigate("/auth/signup");
   };
 
   return (
     <Card className="w-full max-w-md mx-auto shadow-xl bg-slack">
       <CardHeader>
-        <CardTitle className="text-2xl text-center">Verification Code</CardTitle>
+        <CardTitle className="text-2xl text-center">
+          Verification Code
+        </CardTitle>
+        <CardDescription className="text-center">
+          {" "}
+          Enter the verification code sent to your email{" "}
+        </CardDescription>
+        {validationErrors && (
+          <div className="bg-destructive/15 p-4 rounded-md flex items-center gap-x-2 text-sm">
+            <TriangleAlert size={16} />
+            <p>{validationErrors.message || "Something went wrong"}</p>
+          </div>
+        )}
+
+        {error && (
+          <div className="bg-destructive/15 p-4 rounded-md flex items-center gap-x-2 text-sm">
+            <TriangleAlert size={16} />
+            <p>{error.message || "Something went wrong"}</p>
+          </div>
+        )}
+        {isSuccess && (
+          <div className="bg-green-100 p-4 rounded-md flex items-center gap-x-2 text-sm text-green-800">
+            <FaCheck size={16} className="text-green-500" />
+            <p>Successful sign up, redirecting to code verification page...</p>
+            <LucideLoader2 className="animate-spin" size={16} />
+          </div>
+        )}
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
@@ -77,10 +73,13 @@ export const CodeCard = () => {
               value={verificationForm.email}
               onChange={handleChange}
               required
+              disabled={isPending}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-medium leading-none">Verification Code</label>
+            <label className="text-sm font-medium leading-none">
+              Verification Code
+            </label>
             <div className="flex gap-2 justify-center">
               {verificationForm.verificationCode.map((digit, idx) => (
                 <Input
@@ -92,22 +91,30 @@ export const CodeCard = () => {
                   value={digit}
                   onChange={(e) => handleOtpChange(idx, e.target.value)}
                   required
+                  disabled={isPending}
                 />
               ))}
             </div>
           </div>
         </CardContent>
         <CardFooter className="flex justify-center">
-          <Button type="submit" disabled={isLoading}>
-            {isLoading ? "Submitting..." : "Submit"}
+          <Button type="submit" disabled={isPending}>
+            {isPending ? (
+              <span className="flex items-center gap-2">
+                <LucideLoader2 className="animate-spin" size={16} />{" "}
+                Submitting...
+              </span>
+            ) : (
+              "Submit"
+            )}
           </Button>
         </CardFooter>
       </form>
-      <p className="text-center text-sm text-muted-foreground">
+      <p className="text-center text-sm text-muted-foreground mb-5">
         Didn't receive code?{" "}
-        <span 
-        onClick={() => usenavigate("/auth/signup")}
-        className="text-blue-500 cursor-pointer">Sign Up Again</span>
+        <span onClick={handleResend} className="text-blue-500 cursor-pointer">
+          Sign Up Again
+        </span>
       </p>
     </Card>
   );
