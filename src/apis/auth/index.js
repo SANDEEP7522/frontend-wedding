@@ -52,3 +52,16 @@ export const loginUser = async ({ email, password }) => {
     throw error.response.data;
   }
 };
+
+export const forgetPassword = async ({ email }) => {
+  try {
+    const response = await axios.post("/users/password/forget", {
+      email,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("forgetPassword", error);
+    throw error;
+  }
+};
