@@ -27,7 +27,7 @@ export const SignupCard = ({
   const navigate = useNavigate();
 
   return (
-    <Card className="w-full max-w-md mx-auto shadow-xl bg-slack">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-2xl text-center">Sign Up</CardTitle>
         <CardDescription className="text-center">
@@ -133,7 +133,7 @@ export const SignupCard = ({
         </CardContent>
 
         <CardFooter className="flex justify-center">
-          <Button type="submit" className="w-full" disabled={isPending}>
+          <Button type="submit" className="glass-card" disabled={isPending}>
             {isPending ? (
               <div className="flex items-center justify-center gap-2">
                 <LucideLoader2 className="animate-spin" size={16} />

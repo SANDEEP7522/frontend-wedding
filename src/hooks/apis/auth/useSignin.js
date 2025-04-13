@@ -10,8 +10,13 @@ export const useSignin = () => {
     mutateAsync: signinMutation,
   } = useMutation({
     mutationFn: loginUser,
-    onSuccess: (data) => {
-      console.log("Scuccessfully signed in", data);
+    onSuccess: (response) => {
+      console.log("Scuccessfully signed in", response);
+  
+      localStorage.setItem("token", response.token); 
+      localStorage.setItem("user", JSON.stringify(response.user));
+    
+
       toast({
         title: "Successfully signed in",
         message: "You will be redirected to the home page in a few seconds",

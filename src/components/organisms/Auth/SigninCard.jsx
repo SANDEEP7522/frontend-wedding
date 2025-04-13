@@ -22,7 +22,7 @@ export const SigninCard = ({
   const navigate = useNavigate();
 
   return (
-    <Card className="h-full w-full bg-blue-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle>Sign In</CardTitle>
         <CardDescription>Sign in to access your account</CardDescription>
@@ -74,7 +74,7 @@ export const SigninCard = ({
         <Button
           type="submit"
           disabled={isPending}
-          className="w-full bg-primary-foreground hover:bg-primary-foreground/90 text-primary-background font-semibold"
+          className="glass-card"
         >
           {isPending ? "Signing In..." : "Continue"}
         </Button>

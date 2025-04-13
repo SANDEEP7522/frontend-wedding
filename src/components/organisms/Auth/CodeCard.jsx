@@ -32,7 +32,7 @@ export const CodeCard = ({
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto shadow-xl bg-slack">
+    <Card className="glass-card">
       <CardHeader>
         <CardTitle className="text-2xl text-center">
           Verification Code
@@ -98,7 +98,7 @@ export const CodeCard = ({
           </div>
         </CardContent>
         <CardFooter className="flex justify-center">
-          <Button type="submit" disabled={isPending}>
+          <Button type="submit" className="glass-card" disabled={isPending}>
             {isPending ? (
               <span className="flex items-center gap-2">
                 <LucideLoader2 className="animate-spin" size={16} />{" "}

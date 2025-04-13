@@ -16,6 +16,10 @@ export default {
 				DEFAULT: '#5c3858',
 				slacks: '###d1d5db',		
 			}, 
+			glassi: {
+				DEFAULT: 'rgba(255, 255, 255, 0.2)', // light glass
+				dark: 'rgba(0, 0, 0, 0.2)',           // dark glass (optional)
+			   },
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'

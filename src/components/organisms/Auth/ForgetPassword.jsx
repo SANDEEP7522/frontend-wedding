@@ -43,7 +43,7 @@ export const ForgetPassword = () => {
   }, [isSuccess]);
 
   return (
-    <Card className="h-full w-full bg-slack rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-gray-100">
+    <Card className="glass-card">
       <CardHeader className="flex items-center justify-center">
         <CardTitle className="text-3xl">Forget Password</CardTitle>
         <CardDescription>
@@ -88,8 +88,7 @@ export const ForgetPassword = () => {
           <Button
             type="submit"
             disabled={isPending}
-            className="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded"
-          >
+            className="glass-card">
             {isPending ? "Sending..." : "Send"}
           </Button>
         </div>

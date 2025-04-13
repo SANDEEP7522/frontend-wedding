@@ -1,5 +1,5 @@
 // inSide this Function we comine multiple context providers like helper function
-
+// ... in the (rest opretor) we can pass multiple context providers
 export default function combineContext(...providers) {
   /**
    * this combine multiple context providers together and returns a single context provider

@@ -63,4 +63,12 @@
   }
 }
 
+@layer utilities {
+  .glass-card {
+    @apply h-full w-full backdrop-blur-md bg-opacity-20 border border-white/20 z-50 rounded-xl shadow-xl;
+    @apply bg-slack hover:bg-slack/70 text-gray-400 font-semibold;
+  }
+}
+
+
 

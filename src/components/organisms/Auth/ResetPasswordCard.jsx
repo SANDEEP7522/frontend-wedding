@@ -66,7 +66,7 @@ export const ResetPasswordCard = () => {
   }, [isSuccess, navigate]);
 
   return (
-    <Card className="max-w-md mx-auto mt-8 p-6 shadow-lg bg-slack">
+    <Card className="glass-card">
       <CardHeader className="flex items-center justify-center">
         <CardTitle className="text-3xl">Reset Password</CardTitle>
         <CardDescription>
@@ -116,7 +116,7 @@ export const ResetPasswordCard = () => {
         <div>
           <Button
             type="submit"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gray-500 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="glass-card"
             disabled={isPending}
           >
             {isPending ? "Resetting..." : "Reset Password"}
