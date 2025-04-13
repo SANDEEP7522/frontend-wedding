@@ -27,7 +27,8 @@ export const SignupCard = ({
   const navigate = useNavigate();
 
   return (
-    <Card className="glass-card">
+    <div className="h-screen w-screen flex justify-center items-center">
+    <Card className="glass-card md:w-[420px] md:h-auto ">
       <CardHeader>
         <CardTitle className="text-2xl text-center">Sign Up</CardTitle>
         <CardDescription className="text-center">
@@ -156,5 +157,6 @@ export const SignupCard = ({
         </span>
       </p>
     </Card>
+    </div>
   );
 };

@@ -22,7 +22,8 @@ export const SigninCard = ({
   const navigate = useNavigate();
 
   return (
-    <Card className="glass-card">
+    <div className="h-screen w-screen flex justify-center items-center">
+    <Card className="glass-card md:w-[420px] md:h-auto">
       <CardHeader>
         <CardTitle>Sign In</CardTitle>
         <CardDescription>Sign in to access your account</CardDescription>
@@ -101,5 +102,6 @@ export const SigninCard = ({
         </span>
       </p>
     </Card>
+    </div>
   );
 };
