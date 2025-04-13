@@ -10,7 +10,8 @@ export const AuthContextProvider = ({ children }) => {
   // Initialize auth state with null user and token
   const [auth, setAuth] = useState({
     user: null,
-    token: null
+    token: null,
+    isLoading: true,
   });
 
   // When the component mounts, check localStorage for existing user and token
@@ -22,8 +23,15 @@ export const AuthContextProvider = ({ children }) => {
     if (user && token) {
       setAuth({
         user,
-        token
+        token,
+        isLoading: false,
       });
+    }else{
+      setAuth({
+        user: null,
+        token: null,
+        isLoading: false,
+      })
     }
   }, []);
 

@@ -6,6 +6,7 @@ import { SigninContainer } from "@/components/organisms/Auth/SigninContainer";
 import { ForgetPassword } from "@/components/organisms/Auth/ForgetPassword";
 import { ResetPasswordCard } from "@/components/organisms/Auth/ResetPasswordCard";
 import { NotFound } from "./pages/NotFound/NoteFound";
+import { ProtectedRoute } from "./components/molecules/ProtectedRoute/ProtectedRoute";
 
 export const AppRoutes = () => {
   return (
@@ -13,7 +14,7 @@ export const AppRoutes = () => {
         <Route path="/auth/signup" element={<Auth> <SignupContainer /> </Auth>} />
         <Route path="/auth/code" element={<Auth><CodeContainer />  </Auth>} />
         <Route path="/auth/signin" element={<Auth> <SigninContainer /> </Auth>} />
-        <Route path="/home" element={<Auth> <h1>home</h1> </Auth>} />
+        <Route path="/home" element={<ProtectedRoute><Auth> <h1>home</h1> </Auth></ProtectedRoute>} />
         <Route path="/auth/forget" element={<Auth><ForgetPassword /></Auth>} />
         <Route path="/auth/reset/:token" element={<Auth><ResetPasswordCard /></Auth>} />
   
