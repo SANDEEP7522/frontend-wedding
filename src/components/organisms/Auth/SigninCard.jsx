@@ -19,17 +19,6 @@ export const SigninCard = ({
   isSuccess,
   isPending,
 }) => {
-  // y undefined a rha hai maine sahi pass kiya hu to bhi
-  console.log("SigninCard rendered", {
-    signinForm,
-    handleChange,
-    onSigninFormSubmit,
-    validationError,
-    error,
-    isSuccess,
-    isPending,
-  });
-
   const navigate = useNavigate();
 
   return (
@@ -92,14 +81,23 @@ export const SigninCard = ({
       </form>
 
       <Separator className="my-4" />
-
-      <p className="text-center text-sm text-muted-foreground">
-        Don't have an account?{" "}
+      <p className="text-center text-sm sm:text-base text-muted-foreground">
+        🚀 Don't have an account?{" "}
         <span
           onClick={() => navigate("/auth/signup")}
           className="text-sky-600 hover:text-sky-500 underline cursor-pointer"
         >
-          Sign Up
+          Sign Up ✨
+        </span>
+      </p>
+
+      <p className="text-center mt-4 text-sm sm:text-base mb-2">
+        Oops! Can't remember your password?{" "}
+        <span
+          onClick={() => navigate("/auth/forget")}
+          className="text-blue-600 hover:text-blue-500 underline cursor-pointer"
+        >
+          🔐 Reset it here
         </span>
       </p>
     </Card>

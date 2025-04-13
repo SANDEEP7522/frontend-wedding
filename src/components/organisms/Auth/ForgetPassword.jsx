@@ -37,7 +37,7 @@ export const ForgetPassword = () => {
   useEffect(() => {
     if (isSuccess) {
       setTimeout(() => {
-        navigate("/auth/reset-password");// it is redirecting to reset password
+        navigate("/auth/reset/:token");// it is redirecting to reset password
       }, 3000);
     }
   }, [isSuccess]);
@@ -88,7 +88,7 @@ export const ForgetPassword = () => {
           <Button
             type="submit"
             disabled={isPending}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+            className="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded"
           >
             {isPending ? "Sending..." : "Send"}
           </Button>

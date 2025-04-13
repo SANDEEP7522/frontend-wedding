@@ -56,12 +56,30 @@ export const loginUser = async ({ email, password }) => {
 export const forgetPassword = async ({ email }) => {
   try {
     const response = await axios.post("/users/password/forget", {
-      email,
+  email,
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
-
     return response.data;
   } catch (error) {
     console.log("forgetPassword", error);
     throw error;
   }
 };
+
+export const resetPassword = async ({ password, confirmPassword, token }) => {
+  try {
+    const response = await axios.put(`/users/password/reset/${token}`, {
+      password,
+      confirmPassword,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("resetPassword", error);
+    throw error;
+  }
+};
+
