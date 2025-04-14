@@ -3,6 +3,7 @@ import { InhouseServices } from "@/components/atoms/InhouseServices/InhouseServi
 import { Navbar } from "@/components/atoms/Navebar/Navebar";
 import { PopularSearches } from "@/components/atoms/PopularSearches/PopularSearches";
 import { PopularVenues } from "@/components/atoms/PopularVenues/PopularVenues";
+import { RealWeddingStories } from "@/components/atoms/RealWeddingStories/RealWeddingStories";
 import { ViewCategoriesButton } from "@/components/atoms/ViewCategoriesButton/ViewCategoriesButton";
 
 export const Home = () => {
@@ -23,6 +24,9 @@ export const Home = () => {
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
        <InhouseServices />
+      </main>
+      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+       <RealWeddingStories />
       </main>
     
         
