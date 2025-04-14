@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { ArrowBigUp } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
@@ -7,6 +8,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const WedMeGoodPlanner = () => {
   return (

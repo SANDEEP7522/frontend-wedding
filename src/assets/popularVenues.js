@@ -265,3 +265,61 @@ export const services = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgR3EiB7wMws9_rYVCBrgekvSMrUwyXbAjiA&s'  // Replace with actual image URL
   },
 ];
+
+export const footerLinks = [
+  {
+    title: "Start Planning",
+    links: [
+      { name: "Search By Vendor", path: "/vendors" },
+      { name: "Search By City", path: "/vendors/city" },
+      { name: "Download Our App", path: "/app" },
+      { name: "Top Rated Vendors", path: "/top-rated-vendors" },
+      { name: "Destination Wedding", path: "/destination-wedding" },
+    ]
+  },
+  {
+    title: "Wedding Ideas",
+    links: [
+      { name: "Wedding Blog", path: "/wedding-blog" },
+      { name: "Wedding Inspiration Gallery", path: "/wedding-inspiration" },
+      { name: "Real Wedding", path: "/real-weddings" },
+      { name: "Submit Wedding", path: "/submit-wedding" },
+    ]
+  },
+  {
+    title: "Photo Gallery",
+    links: [
+      { name: "Bridal Wear", path: "/photos/bridal-wear" },
+      { name: "Wedding Jewellery", path: "/photos/jewellery" },
+      { name: "Bridal Makeup & Hair", path: "/photos/makeup-hair" },
+      { name: "Wedding Decor", path: "/photos/decor" },
+      { name: "Wedding Photography", path: "/photos/photography" },
+      { name: "Groom Wear", path: "/photos/groom-wear" },
+      { name: "Invitations & Favors", path: "/photos/invitations" },
+      { name: "Wedding Accessories", path: "/photos/accessories" },
+      { name: "Mehendi Designs", path: "/photos/mehendi" },
+    ]
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "Home", path: "/" },
+      { name: "About WedMeGood", path: "/about" },
+      { name: "Careers", path: "/careers" },
+      { name: "Contact Us", path: "/contact" },
+      { name: "Site Map", path: "/sitemap" },
+      { name: "Terms & Conditions", path: "/terms" },
+      { name: "Privacy Policy", path: "/privacy" },
+      { name: "Cancellation Policy", path: "/cancellation" },
+    ]
+  },
+  {
+    title: "Invitation Tools",
+    links: [
+      { name: "Wedding Invitation Maker", path: "/invitation-maker" },
+      { name: "Wedding Card Designs", path: "/card-designs" },
+      { name: "Save the Date Templates", path: "/save-the-date" },
+      { name: "Invitation Video Templates", path: "/video-invitations" },
+    ]
+  }
+];
