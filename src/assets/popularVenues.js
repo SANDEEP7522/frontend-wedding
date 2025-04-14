@@ -233,3 +233,35 @@ export const weddingCategories = {
   ]
 };
 
+export const services = [
+  { 
+    id: 1, 
+    name: 'Venue Booking', 
+    description: 'Book the perfect wedding venue that fits your style and budget.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc4obRA6NpdsSCmtYBlNm3MZruT-tURvFX1A&s'  // Replace with actual image URL
+  },
+  { 
+    id: 2, 
+    name: 'Catering', 
+    description: 'Delicious and customized catering options for your guests.',
+    image: 'https://fhafnb.com/wp-content/uploads/2023/09/Catered-buffet-at-an-event.jpg'  // Replace with actual image URL
+  },
+  { 
+    id: 3, 
+    name: 'Photography', 
+    description: 'Capture the most memorable moments with professional wedding photographers.',
+    image: 'https://images.shiksha.com/mediadata/images/articles/1568193656phpmWI2xq.jpeg'  // Replace with actual image URL
+  },
+  { 
+    id: 4, 
+    name: 'Decorations', 
+    description: 'Elegant floral arrangements and decorations tailored to your wedding theme.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVC6swdxTtzpwZHV26GEY42GD3RQPGvdOwecIClYLkMC9pTNtN5kcqvQ85IVlSICk4Dtg&usqp=CAUg'  // Replace with actual image URL
+  },
+  { 
+    id: 5, 
+    name: 'Entertainment', 
+    description: 'Live bands, DJs, and performances to keep your guests entertained.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgR3EiB7wMws9_rYVCBrgekvSMrUwyXbAjiA&s'  // Replace with actual image URL
+  },
+];
