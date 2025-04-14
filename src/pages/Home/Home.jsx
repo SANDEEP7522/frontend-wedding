@@ -5,6 +5,7 @@ import { PopularSearches } from "@/components/atoms/PopularSearches/PopularSearc
 import { PopularVenues } from "@/components/atoms/PopularVenues/PopularVenues";
 import { RealWeddingStories } from "@/components/atoms/RealWeddingStories/RealWeddingStories";
 import { ViewCategoriesButton } from "@/components/atoms/ViewCategoriesButton/ViewCategoriesButton";
+import { WedMeGoodPlanner } from "@/components/atoms/WedMeGood/WedMeGood";
 
 export const Home = () => {
   return (
@@ -27,6 +28,10 @@ export const Home = () => {
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
        <RealWeddingStories />
+      </main>
+    
+      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+       <WedMeGoodPlanner />
       </main>
     
         
