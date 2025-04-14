@@ -130,3 +130,106 @@ export const categories = [
   "Bridal Grooming",
 ];
 
+export const weddingCategories = {
+  Venues: [
+    "Banquet Halls",
+    "Marriage Garden / Lawns",
+    "Wedding Resorts",
+    "Small Function / Party Halls",
+    "Destination Wedding Venues",
+    "Kalyana Mandapams",
+    "4 Star & Above Wedding Hotels",
+  ],
+  Caterers: [
+    "Premium Caterers",
+    "Budget Caterers",
+    "Regional Specialists",
+    "Live Counters",
+    "Theme-based Caterers",
+  ],
+  Photographers: [
+    "Wedding Photography",
+    "Candid Photography",
+    "Cinematography",
+    "Drone Photography",
+  ],
+  MakeupArtists: [
+    "Bridal Makeup",
+    "Party Makeup",
+    "HD Makeup",
+    "Airbrush Makeup",
+  ],
+  MehndiArtists: [
+    "Bridal Mehndi",
+    "Arabic Mehndi",
+    "Traditional Mehndi",
+    "Tattoo Mehndi",
+  ],
+  Decorators: [
+    "Theme Decorators",
+    "Floral Decorators",
+    "Lighting Experts",
+    "Stage Designers",
+  ],
+  WeddingPlanners: [
+    "Luxury Wedding Planners",
+    "Budget Planners",
+    "Destination Planners",
+    "Event Coordinators",
+  ],
+  DJs: [
+    "Wedding DJs",
+    "Live Bands",
+    "Traditional Music",
+    "Sound & Light Experts",
+  ],
+  Invitations: [
+    "E-Invites",
+    "Printed Invites",
+    "Custom Designed Cards",
+    "Boxed Invitations",
+  ],
+  Gifts: [
+    "Return Gifts",
+    "Customized Gifts",
+    "Hampers & Baskets",
+    "Eco-Friendly Gifts",
+  ],
+  Accessories: [
+    "Bridal Jewelry",
+    "Groom Accessories",
+    "Wedding Footwear",
+    "Clutches & Bags",
+  ],
+  Outfits: [
+    "Bridal Lehenga",
+    "Groom Sherwani",
+    "Reception Gowns",
+    "Sarees & Ethnic Wear",
+  ],
+  Transport: [
+    "Luxury Cars",
+    "Vintage Cars",
+    "Wedding Bus Service",
+    "Horse & Carriage",
+  ],
+  Choreographers: [
+    "Sangeet Choreography",
+    "Couple Dance",
+    "Flash Mobs",
+    "Family Performance",
+  ],
+  Pandits: [
+    "North Indian Pandit",
+    "South Indian Purohit",
+    "Jain Pandit",
+    "Arya Samaj Pandit",
+  ],
+  Honeymoon: [
+    "Domestic Packages",
+    "International Packages",
+    "Custom Honeymoon Plans",
+    "Adventure Honeymoon",
+  ]
+};
+
