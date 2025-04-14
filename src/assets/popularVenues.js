@@ -110,3 +110,23 @@ export const searches = [
     image: img07,
   },
 ];
+
+export const categories = [
+  "Wedding Categories",
+  "Venues",
+  "Photographers",
+  "Makeup",
+  "Pre Wedding Shoot",
+  "Planning & Decor",
+  "Bridal Wear",
+  "Groom Wear",
+  "Mehndi",
+  "Mehendi Artist",
+  "Jewellery & Accessories",
+  "Invites & Gifts",
+  "Music & Dance",
+  "Food",
+  "Pandits",
+  "Bridal Grooming",
+];
+
