@@ -11,7 +11,7 @@ import { LogOutIcon, Settings } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const UserButton = () => {
-  const naavigate = useNavigate();
+  const navigator = useNavigate();
   const { auth, logOut } = useAuth();
   const { toast } = useToast();
 
@@ -35,7 +35,7 @@ export const UserButton = () => {
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
+      <DropdownMenuContent className="w-56  bg-glass-card ">
         <DropdownMenuItem>
           <Settings />
           Setting
