@@ -83,11 +83,25 @@ body {
 
 @layer utilities {
   .custom-link {
-    @apply w-full justify-start text-blue-600 hover:text-blue-900 mb-1;
+    @apply w-full justify-start text-blue-600 hover:text-blue-900 mb-2;
   }
   .custom-link-active {
     @apply w-full justify-start text-pink-700 text-lg mt-4;
   }
+}
+
+/* Custom slim horizontal scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #5c3858; /* light pink background */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #ec4899; /* darker pink for thumb */
+  border-radius: 8px;
 }
 
 

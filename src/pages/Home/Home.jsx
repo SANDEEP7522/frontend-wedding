@@ -1,5 +1,6 @@
 import { EventHeader } from "@/components/atoms/EventHeader/EventHeader";
 import { Navbar } from "@/components/atoms/Navebar/Navebar";
+import { PopularSearches } from "@/components/atoms/PopularSearches/PopularSearches";
 import { PopularVenues } from "@/components/atoms/PopularVenues/PopularVenues";
 
 export const Home = () => {
@@ -11,6 +12,9 @@ export const Home = () => {
       </div>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
         <PopularVenues />
+      </main>
+      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+        <PopularSearches />
       </main>
     </div>
   );

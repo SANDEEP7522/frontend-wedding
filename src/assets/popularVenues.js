@@ -1,3 +1,12 @@
+import img01 from "./img01.jpg"
+import img02 from "./img02.jpg"
+import img03 from "./img03.jpg"
+import img04 from "./img04.jpg"
+import img05 from "./img05.jpg"
+import img06 from "./img06.jpg"
+import img07 from "./img07.jpg"
+import img08 from "./img08.jpg"
+import img09 from "./img09.jpg"
 
 export const popularVenues = [
      {
@@ -61,4 +70,43 @@ export const popularVenues = [
        cities: ["Mumbai", "Bangalore", "Pune"],
      },
    ];
+
    
+export const searches = [
+  {
+    title: "Bridal Wear",
+    image: img04,
+  },
+  {
+    title: "Bridal Makeup",
+    image: img09,
+  },
+  {
+    title: "Photographers",
+    image: img06,
+  },
+  {
+    title: "Invitations",
+    image: img05,
+  },
+  {
+    title: "Catering Services",
+    image: img03,
+  },
+  {
+    title: "Groom Wear",
+    image: img01,
+  },
+  {
+    title: "Mehedi Artiest",
+    image: img02,
+  },
+  {
+    title: "Decorator",
+    image: img08,
+  },
+  {
+    title: "DJ",
+    image: img07,
+  },
+];

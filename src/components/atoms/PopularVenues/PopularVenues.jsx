@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 export const PopularVenues = () => {
   return (
-    <section className="px-4 md:px-10 py-8 bg-glass-card w-full">
+    <section className="px-4 md:px-10 py-8 w-full">
       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
-        Popular Searches
+        Popular Venue Searches
       </h2>
 
       <div className="relative">
-        <div className="flex overflow-x-auto space-x-6 scrollbar-hide pb-2">
+        <div className="flex overflow-x-auto space-x-6 scrollbar-hide pb-2 scrollbar-thin cursor-pointer">
           {popularVenues.map((venue, index) => (
             <motion.div
               key={index}
