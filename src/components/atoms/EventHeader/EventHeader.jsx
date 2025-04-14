@@ -5,9 +5,7 @@ import img2 from "@/assets/02.jpg";
 import img3 from "@/assets/03.jpg";
 import img4 from "@/assets/04.jpg";
 
-const images = [
-  img1, img2, img3, img4
-]; // put images in /public
+const images = [img1, img2, img3, img4]; // put images in /public
 
 export const EventHeader = () => {
   const [index, setIndex] = useState(0);
@@ -20,7 +18,7 @@ export const EventHeader = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[90vh] overflow-hidden">
+    <div className="relative w-full h-[90vh] overflow-hidden bg-glass-card">
       <AnimatePresence mode="wait">
         <motion.img
           key={index}
@@ -35,8 +33,12 @@ export const EventHeader = () => {
 
       {/* Overlay Content */}
       <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center p-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Your Wedding, Your Way</h1>
-        <p className="text-lg md:text-xl mb-6">Find the best wedding vendors with thousands of trusted reviews</p>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          Your Wedding, Your Way
+        </h1>
+        <p className="text-lg md:text-xl mb-6">
+          Find the best wedding vendors with thousands of trusted reviews
+        </p>
 
         {/* Input Group */}
         <div className="bg-white rounded-lg overflow-hidden flex flex-col md:flex-row w-full max-w-3xl shadow-lg">
@@ -59,8 +61,10 @@ export const EventHeader = () => {
         </div>
 
         <p className="mt-4 text-sm text-white font-medium">
-          Popular Searches: <span className="underline">Wedding Photographers</span> |{" "}
-          <span className="underline">Makeup Artists</span> | <span className="underline">Venues</span>
+          Popular Searches:{" "}
+          <span className="underline">Wedding Photographers</span> |{" "}
+          <span className="underline">Makeup Artists</span> |{" "}
+          <span className="underline">Venues</span>
         </p>
       </div>
     </div>

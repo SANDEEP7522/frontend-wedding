@@ -1,0 +1,64 @@
+
+export const popularVenues = [
+     {
+       title: "4 Star & Above Wedding Hotels",
+       image: "https://cdn0.weddingwire.in/vendor/0408/3_2/960/jpg/wedding-lawns-farmhouses-classic-garden-marriage-banquet-event-space-7_15_450408-168784509114114.jpeg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Banquet Halls",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ9zaVgVar8jODwzD0zxP8mhxV_VtNu5m3WA&s",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXVRZrEIKnSyGSOYkSoHB3vU2nllL9Uq02yg&s",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://imagewedz.oyoroomscdn.com/medium/photologue/images/the-green-valley-sikandra-agra.jpg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://cdn0.weddingwire.in/vendor/8477/3_2/640/jpeg/whatsapp-image-2022-09-06-at-8-34-32-pm-1_15_138477-166255075025225.jpeg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://cdn0.weddingwire.in/vendor/1539/3_2/640/jpg/wedding-venue-roy-bari-event-entrance-decor-2_15_361539-161528977289866.jpeg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://image.wedmegood.com/resized/720X/uploads/member/2858666/1677562040_WhatsApp_Image_2023_02_15_at_14.50.28.jpeg?crop=34,109,963,542",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTni6_apQg6BEeejq9lwkRK8IUC4KgnHIxUBA&s",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://cdn0.weddingwire.in/vendor/8477/3_2/640/jpg/img-20200204-wa0005_15_138477-159912186793916.jpeg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_o7OgZ5k6XEDo7kxFFZSZOphL23gSv_6LUg&s",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKGFDq4JELfhf8nnIVLq_BKFEtM0FOZgN3g&s",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+     {
+       title: "Marriage Garden / Lawns",
+       image: "https://cdn0.weddingwire.in/vendor/8477/3_2/640/jpg/img-20200204-wa0005_15_138477-159912186793916.jpeg",
+       cities: ["Mumbai", "Bangalore", "Pune"],
+     },
+   ];
+   
