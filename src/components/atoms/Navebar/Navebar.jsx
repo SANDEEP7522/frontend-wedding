@@ -28,7 +28,7 @@ export const Navbar = () => {
   const { auth } = useAuth();
 
   return (
-    <nav className="shadow-lg backdrop-blur-md sticky top-0 z-80 bg-white/60">
+    <nav className="shadow-2xl backdrop-blur-md sticky top-0 z-80">
       <div className="w-full px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
@@ -77,7 +77,7 @@ export const Navbar = () => {
                   <Menu />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[240px] sm:w-[300px] ">
+              <SheetContent side="right" className="w-[240px] sm:w-[300px] glass-card ">
                 <SheetHeader>
                   <SheetTitle className="text-pink-600 text-2xl font-bold">
                     💍 Wedding Menu
@@ -86,13 +86,13 @@ export const Navbar = () => {
                 <div className="mt-6 space-y-3">
                   <Link>
                     {" "}
-                    <Card>
+                    <Card className="glass-card">
                       <CardHeader>
                         <UserButton />
-                        <CardTitle>{auth?.user?.name}</CardTitle>
+                        <CardTitle className="text-pink-600">{auth?.user?.name}</CardTitle>
                         <CardDescription>{auth?.user?.email}</CardDescription>
                       </CardHeader>
-                      <Link to="/" className="custom-link">
+                      <Link to="/" className="custom-link ml-6">
                         🔓 Log Out
                       </Link>
                     </Card>
