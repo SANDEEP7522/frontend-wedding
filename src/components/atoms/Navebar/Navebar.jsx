@@ -41,7 +41,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="shadow-2xl backdrop-blur-md sticky top-0 z-80">
+    <nav className="shadow-2xl backdrop-blur-md sticky top-0 z-80 bg-slack">
       <div className="w-full px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}

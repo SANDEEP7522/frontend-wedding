@@ -1,7 +1,6 @@
 import { EventHeader } from "@/components/atoms/EventHeader/EventHeader";
 import { FooterNavigation } from "@/components/atoms/FooterNavigation/FooterNavigation";
 import { InhouseServices } from "@/components/atoms/InhouseServices/InhouseServices";
-import { Navbar } from "@/components/atoms/Navebar/Navebar";
 import { PopularSearches } from "@/components/atoms/PopularSearches/PopularSearches";
 import { PopularVenues } from "@/components/atoms/PopularVenues/PopularVenues";
 import { RealWeddingStories } from "@/components/atoms/RealWeddingStories/RealWeddingStories";
@@ -11,10 +10,7 @@ import { WedMeGoodPlanner } from "@/components/atoms/WedMeGood/WedMeGood";
 export const Home = () => {
   return (
     <div className="h-screen w-screen flex flex-col">
-      <Navbar />
-      <div className="w-full">
-        <EventHeader />
-      </div>
+      <EventHeader />
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
         <PopularVenues />
       </main>
@@ -22,24 +18,20 @@ export const Home = () => {
         <PopularSearches />
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-       <ViewCategoriesButton />
+        <ViewCategoriesButton />
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-       <InhouseServices />
+        <InhouseServices />
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-       <RealWeddingStories />
-      </main>
-    
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-       <WedMeGoodPlanner />
+        <RealWeddingStories />
       </main>
       <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-       <FooterNavigation />
+        <WedMeGoodPlanner />
       </main>
-    
-        
-     
+      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+        <FooterNavigation />
+      </main>
     </div>
   );
 };

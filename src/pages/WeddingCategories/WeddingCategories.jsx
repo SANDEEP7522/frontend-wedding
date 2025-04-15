@@ -13,7 +13,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { weddingCategories } from "@/assets/popularVenues";
-import { Navbar } from "@/components/atoms/Navebar/Navebar";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowBigLeft } from "lucide-react";
@@ -29,8 +28,8 @@ const WeddingCategories = () => {
   };
 
   return (
-    <div className="max-w-6xl px-4 md:px-8 py-8 mx-auto bg-slack mt-[-44rem]">
-         <Navbar />
+    <div className="bg-slack w-full  mt-[-44rem]">
+    <div className="max-w-6xl px-4 md:px-8 py-8 mx-auto bg-slack"> 
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,6 +99,7 @@ const WeddingCategories = () => {
           </AccordionItem>
         ))}
       </Accordion>
+    </div>
     </div>
   );
 };
