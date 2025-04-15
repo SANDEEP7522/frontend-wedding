@@ -119,9 +119,11 @@ export const WedMeGoodPlanner = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <Button variant="outline" className="bg-glassi hover:bg-gray-600">
-              Register as a Vendor/Event
-            </Button>
+            <Link to={"/auth/event/createEvent"}>
+              <Button variant="outline" className="bg-glassi hover:bg-gray-600">
+                Register as a Vendor/Event
+              </Button>
+            </Link>
           </div>
         </div>
         <p className="text-center text-gray-500 text-sm">

@@ -10,6 +10,7 @@ import { ProtectedRoute } from "./components/molecules/ProtectedRoute/ProtectedR
 import { Home } from "./pages/Home/Home";
 import WeddingCategories from "./pages/WeddingCategories/WeddingCategories";
 import { Navbar } from "./components/atoms/Navebar/Navebar";
+import { NewEventContainer } from "./components/organisms/eventManagement/newEventContainer";
 
 export const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ export const AppRoutes = () => {
         <Route path="/auth/forget" element={<Auth><ForgetPassword /></Auth>} />
         <Route path="/auth/reset/:token" element={<Auth><ResetPasswordCard /></Auth>} />
         <Route path="/auth/wedding-categories" element={<ProtectedRoute><Auth></Auth><WeddingCategories /><Auth /></ProtectedRoute>} />
+        <Route path="/auth/event/createEvent" element={<ProtectedRoute><Auth></Auth><NewEventContainer /><Auth /></ProtectedRoute>} />
   
   
         <Route path="/*" element={<NotFound />} />
