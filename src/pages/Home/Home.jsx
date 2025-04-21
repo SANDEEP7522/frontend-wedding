@@ -9,29 +9,19 @@ import { WedMeGoodPlanner } from "@/components/atoms/WedMeGood/WedMeGood";
 
 export const Home = () => {
   return (
-    <div className="h-screen w-screen flex flex-col">
+    <div class="container mx-auto px-4 bg-slack">
       <EventHeader />
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-        <PopularVenues />
-      </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-        <PopularSearches />
-      </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-        <ViewCategoriesButton />
-      </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+      <PopularVenues />
+      <PopularSearches />
+      <ViewCategoriesButton />
+      <main className=" bg-slack w-screen">
         <InhouseServices />
       </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-        <RealWeddingStories />
-      </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
+      <RealWeddingStories />
+      <main className=" bg-slack w-screen">
         <WedMeGoodPlanner />
       </main>
-      <main className="flex-1 w-screen bg-slack px-4 md:px-8 lg:px-16">
-        <FooterNavigation />
-      </main>
+      <FooterNavigation />
     </div>
   );
 };

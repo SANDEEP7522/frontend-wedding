@@ -7,18 +7,18 @@ import { ForgetPassword } from "@/components/organisms/Auth/ForgetPassword";
 import { ResetPasswordCard } from "@/components/organisms/Auth/ResetPasswordCard";
 import { NotFound } from "./pages/NotFound/NoteFound";
 import { ProtectedRoute } from "./components/molecules/ProtectedRoute/ProtectedRoute";
-import { Home } from "./pages/Home/Home";
 import WeddingCategories from "./pages/WeddingCategories/WeddingCategories";
 import { Navbar } from "./components/atoms/Navebar/Navebar";
 import { NewEventContainer } from "./components/organisms/eventManagement/newEventContainer";
+import { Home } from "./pages/Home/Home";
 
 export const AppRoutes = () => {
   return (
     <>
-    <div>
+  
     <Navbar/>
   <Routes>
-        <Route path="/" element={<Auth><Home /></Auth>} />
+        {/* <Route path="/" element={<Auth><Home /></Auth>} /> */}
         <Route path="/auth/signup" element={<Auth> <SignupContainer /> </Auth>} />
         <Route path="/auth/code" element={<Auth><CodeContainer />  </Auth>} />
         <Route path="/auth/signin" element={<Auth> <SigninContainer /> </Auth>} />
@@ -32,7 +32,7 @@ export const AppRoutes = () => {
         <Route path="/*" element={<NotFound />} />
       </Routes>
     
-      </div>
+
       </>
   );
 };

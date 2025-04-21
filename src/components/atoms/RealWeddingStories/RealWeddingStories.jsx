@@ -6,7 +6,7 @@ import { searches } from "@/assets/popularVenues";
 
 export const RealWeddingStories = () => {
   return (
-    <section className="py-8 px-4 md:px-10">
+    <section className="py-8 px-4 md:px-10 w-screen bg-slack">
       <h2 className="text-2xl md:text-3xl font-semibold mb-6">
       Real Wedding Stories
       </h2>

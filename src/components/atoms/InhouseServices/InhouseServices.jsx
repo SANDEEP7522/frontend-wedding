@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 export const InhouseServices = () => {
   return (
-    <div className="max-w-7xl px-4 md:px-8 py-12 mx-auto">
+    <section className="max-w-7xl px-4 md:px-8 py-12 mx-auto w-screen bg-slack">
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -22,7 +22,6 @@ export const InhouseServices = () => {
       >
         <h1 className="text-2xl font-bold mb-4">WMG Inhouse Services</h1>
       </motion.div>
-
       {/* Service Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (
@@ -59,6 +58,6 @@ export const InhouseServices = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

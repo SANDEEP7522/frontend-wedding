@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const ViewCategoriesButton = () => {
   return (
-    <div className="p-4  rounded shadow-xl">
+    <div className="p-4  rounded shadow-xl w-screen bg-slack">
       <h1 className="text-2xl font-bold mb-4">Wedding Categories</h1>
       <ul className="flex flex-wrap gap-2">
         {categories.map((category) => (

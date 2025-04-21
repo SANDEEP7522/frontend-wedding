@@ -18,7 +18,7 @@ export const EventHeader = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[90vh] overflow-hidden bg-glass-card">
+    <div className="relative w-screen h-[90vh] overflow-hidden bg-glass-card">
       <AnimatePresence mode="wait">
         <motion.img
           key={index}

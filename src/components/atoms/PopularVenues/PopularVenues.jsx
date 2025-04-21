@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const PopularVenues = () => {
   return (
-    <section className="px-4 md:px-10 py-8 w-full">
+    <section className="w-screen px-4 md:px-10 py-8 bg-slack">
       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
         Popular Venue Searches
       </h2>
